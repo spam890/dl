@@ -1,0 +1,188 @@
+Add Two Integers
+#include <stdio.h>
+int main() {    
+int number1, number2, sum;
+printf("Enter two integers: ");
+scanf("%d %d", &number1, &number2);
+sum = number1 + number2;      
+printf("%d + %d = %d", number1, number2, sum);
+return 0;
+}
+
+Check Palindrome
+#include <stdio.h>
+int main() {
+int n, reversed = 0, remainder, original;
+printf("Enter an integer: ");
+scanf("%d", &n);
+original = n;
+while (n != 0) {
+remainder = n % 10;
+reversed = reversed * 10 + remainder;
+n /= 10;
+}
+if (original == reversed)
+printf("%d is a palindrome.", original);
+else
+printf("%d is not a palindrome.", original);
+return 0;
+}
+
+Check Even or Odd
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+if(num % 2 == 0)
+        printf("%d is even.", num);
+    else
+        printf("%d is odd.", num);
+    
+    return 0;
+}
+
+the Largest Number Among Three Numbers
+#include <stdio.h>
+
+int main() {
+
+  double n1, n2, n3;
+
+  printf("Enter three different numbers: ");
+  scanf("%lf %lf %lf", &n1, &n2, &n3);
+
+ 
+  if (n1 >= n2 && n1 >= n3)
+    printf("%.2f is the largest number.", n1);
+
+ 
+  if (n2 >= n1 && n2 >= n3)
+    printf("%.2f is the largest number.", n2);
+
+
+  if (n3 >= n1 && n3 >= n2)
+    printf("%.2f is the largest number.", n3);
+
+  return 0;
+}
+
+quadratic
+# include<stdio.h>
+# include<conio.h>
+# include<math.h>
+main (){
+   float a,b,c,r1,r2,d;
+   printf (“enter the values of a b c”);
+   scanf (“ %f %f %f”, &a, &b, &c);
+   d= b*b – 4*a*c;
+   if (d>0){
+      r1 = -b+sqrt (d) / (2*a);
+      r2 = -b-sqrt (d) / (2*a);
+      printf (“The real roots = %f %f”, r1, r2);
+   }
+   else if (d= =0){
+      r1 = -b/(2*a);
+      r2 = -b/(2*a);
+      printf (“roots are equal =%f %f”, r1, r2);
+   }
+
+bubble sort
+#include<stdio.h>
+int main()
+{
+ int a[20],n,i,temp=0,j;
+ printf("Enter number of array elements\n");
+ scanf("%d",&n);
+ printf("Enter array elements\n");
+ for(i=0;i<n;i++)
+ scanf("%d",&a[i]);
+ for(i=1;i<n;i++)
+ {
+ for(j=0;j<n-i;j++)
+ {
+ if(a[j]>a[j+1])
+ {
+ temp=a[j];
+ a[j]=a[j+1];
+ a[j+1]=temp;
+ }
+ }
+ }
+ printf("The sorted array is \n");
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+}
+
+Fibonacci Series 
+#include <stdio.h>
+int main() {
+  int i, n;
+int t1 = 0, t2 = 1;
+
+int nextTerm = t1 + t2;
+printf("Enter the number of terms: ");
+  scanf("%d", &n);
+
+printf("Fibonacci Series: %d, %d, ", t1, t2);
+
+for (i = 3; i <= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 + t2;
+  }
+
+  return 0;
+}
+
+   else
+      printf(“Roots are imaginary”);
+   getch ();
+}
+
+Check Positive or Negative
+#include <stdio.h>
+int main() {
+    double num;
+    printf("Enter a number: ");
+    scanf("%lf", &num);
+    if (num <= 0.0) {
+        if (num == 0.0)
+            printf("You entered 0.");
+        else
+            printf("You entered a negative number.");
+    } 
+    else
+        printf("You entered a positive number.");
+
+    return 0;
+}
+calculator
+#include<stdio.h>
+int main()
+{
+ int num1,num2,choice;
+ int result;
+ printf("Enter two values\n");
+ scanf("%d%d",&num1,&num2);
+ printf("enter your choice\n");
+ printf("1.Addition\n 2.Subtraction\n 3.Multiplication\n 4.Division\n 5.Modulus\n");
+ scanf("%d",&choice);
+ switch(choice)
+ {
+ case 1: result = num1 + num2;
+ break;
+ case 2: result = num1 - num2;
+ break;
+ case 3: result = num1 * num2;
+ break;
+ case 4: result = num1 / num2;
+ break;
+ case 5: result = num1 % num2;
+ break;
+ default:printf("invalid choice");
+ }
+ printf("The Result = %d",result);
+ return 0;
+}
